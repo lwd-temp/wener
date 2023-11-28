@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwener_website=self.webpackChunkwener_website||[]).push([[27379],{39946:function(e){e.exports=JSON.parse('{"label":"Shell","permalink":"/notes/tags/shell","allTagsPath":"/notes/tags","count":1,"items":[{"id":"service/storage/tar","title":"tar","description":"","permalink":"/notes/service/storage/tar"}]}')}}]);

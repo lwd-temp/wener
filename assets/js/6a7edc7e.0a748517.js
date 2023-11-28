@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwener_website=self.webpackChunkwener_website||[]).push([[54317],{52772:function(e){e.exports=JSON.parse('{"label":"Engine","permalink":"/notes/tags/engine","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/browser/safari/webkit","title":"Webkit","description":"- WebKit/WebKit","permalink":"/notes/web/browser/safari/webkit"}]}')}}]);

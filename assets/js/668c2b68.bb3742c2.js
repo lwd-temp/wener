@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwener_website=self.webpackChunkwener_website||[]).push([[47775],{71024:function(e){e.exports=JSON.parse('{"label":"init","permalink":"/notes/tags/init","allTagsPath":"/notes/tags","count":1,"items":[{"id":"os/macos/launchd","title":"launchd","description":"- \u53c2\u8003","permalink":"/notes/os/macos/launchd"}]}')}}]);

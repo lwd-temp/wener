@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwener_website=self.webpackChunkwener_website||[]).push([[89704],{56007:function(e){e.exports=JSON.parse('{"label":"Library","permalink":"/notes/tags/library","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/browser/chrome/cef","title":"CEF","description":"- chromiumembedded/cef","permalink":"/notes/web/browser/chrome/cef"}]}')}}]);

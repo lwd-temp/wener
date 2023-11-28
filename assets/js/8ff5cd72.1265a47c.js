@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwener_website=self.webpackChunkwener_website||[]).push([[27839],{18612:function(e){e.exports=JSON.parse('{"label":"Service","permalink":"/notes/tags/service","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/service/README","title":"AI Service","description":"","permalink":"/notes/ai/service/"}]}')}}]);

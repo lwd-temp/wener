@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwener_website=self.webpackChunkwener_website||[]).push([[10209],{71324:function(e){e.exports=JSON.parse('{"label":"Client","permalink":"/notes/tags/client","allTagsPath":"/notes/tags","count":1,"items":[{"id":"queue/nats/nats-client","title":"Client","description":"- NodeJS","permalink":"/notes/queue/nats/client"}]}')}}]);

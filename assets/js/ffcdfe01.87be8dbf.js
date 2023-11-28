@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwener_website=self.webpackChunkwener_website||[]).push([[83566],{57907:function(e){e.exports=JSON.parse('{"label":"Admin","permalink":"/notes/tags/admin","allTagsPath":"/notes/tags","count":1,"items":[{"id":"os/linux/admin/README","title":"Linux Admin","description":"Free RAM is wasted RAM","permalink":"/notes/os/linux/admin/"}]}')}}]);

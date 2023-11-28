@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwener_website=self.webpackChunkwener_website||[]).push([[17020],{41722:function(e){e.exports=JSON.parse('{"label":"Xfce","permalink":"/story/tags/xfce","allTagsPath":"/story/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwener_website=self.webpackChunkwener_website||[]).push([[23574],{33450:function(e){e.exports=JSON.parse('{"label":".NET","permalink":"/story/tags/net","allTagsPath":"/story/tags","count":3}')}}]);

@@ -5,6 +5,14 @@ tags:
 
 # Design ERP
 
+:::tip Seealso
+
+- [Design API](./design-api.md)
+- [Design Auth](./design-auth.md)
+- [Design Schema](./design-schema.md)
+
+:::
+
 ## 服务分层 {#service-layer}
 
 - DB - Entity - EntityService - RemoteService - Controller/GraphQL/RESTful - UI
@@ -168,6 +176,27 @@ interface GeneralResource {
   deletedBy?: User;
 }
 ```
+
+## React
+
+```ts
+export type UseSimpleQuery<T, V extends object = Record<string, any>> = (options?: {
+  pause?: boolean;
+  suspense?: boolean;
+  variables?: V;
+}) => {
+  data: T | undefined;
+  loading: boolean;
+  error?: any;
+  refetch: () => void;
+};
+export type UseSimpleListQuery<T> = UseSimpleQuery<{ total: number; data: T[] }, ListQueryInput>;
+```
+
+- https://commerce.nearform.com/open-source/urql/docs/api/urql/
+  - useQuery
+  - useMutation
+- https://tanstack.com/query/latest/docs/framework/react/reference/useQuery
 
 ## Activity
 
@@ -394,6 +423,63 @@ interface GeneralResource {
 
 - User != 员工
   - 员工是 HRM 的概念
+- User 可以是 用户、客户、服务商 - 所有能接触、访问到系统的对象
+
+## Case
+
+- 客户投诉、售后服务、内部问题
+- 紧急程度、优先级、客户满意度、处理时长、责任人
+- -> 一个或多个任务、事件、活动、备注、附件
+- 考核指标
+  - 处理时长
+  - 客户满意度
+  - 问题解决率
+  - 任务完成度
+  - 任务绩效 - 每个任务的完成质量、速度等
+
+---
+
+- CaseType
+  - Question
+  - Problem
+  - Request
+- CaseOrigin
+  - Phone
+  - Email
+  - Web
+  - Facebook
+  - Twitter
+- ServiceStage
+  - Identify
+  - Research
+  - Resolve
+- State
+  - Active
+    - In Progress
+    - On Hold
+    - Waiting for Details
+    - Researching
+  - Resolved
+    - Problem Solved
+    - Information Provided
+  - Canceled
+    - Canceled
+    - Merged
+- [Incident (case) entities](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/incident-case-entities)
+
+## Task
+
+代表需要**完成**的工作的通用活动。
+
+- State
+  - Open
+    - Not Started
+    - In Progress
+    - Waiting on someone else
+    - Deferred
+  - Completed
+  - Canceled
+- [Task entity reference](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/task)
 
 ## State & Status
 
@@ -482,6 +568,7 @@ interface GeneralResource {
 | ^                 | ^            | Completed               |
 | ^                 | ^            | Canceled                |
 | ^                 | ^            | Suspended               |
+| ^                 | Inactive     | Inactive                |
 | Campaign Activity | Open         | InProgress              |
 | ^                 | ^            | Proposed                |
 | ^                 | ^            | Pending                 |
@@ -684,20 +771,20 @@ interface GeneralResource {
   - 不一定直接产生沟通
   - 是服务关系
 
-| State      | Status             | Label        | Desc                                                     |
-| ---------- | ------------------ | ------------ | -------------------------------------------------------- |
-| Active     | New                | 新建         | 客户服务刚刚创建，尚未开始任何实质性操作。               |
-| ^          | Onboarding         | 准备阶段     | 客户在此阶段完成必要的准备工作，如资料提交和初步设置。   |
-| ^          | ServicesProvided   | 服务中       | 客户正在接受服务，正常的服务交付期间。                   |
-| ^          | ReviewPending      | 待复核       | 服务已提供，正在等待内部复核或客户最终确认。             |
-| ^          | ComplianceCheck    | 合规性检查   | 进行定期的合规性检查，确保服务符合所有相关法规和标准。   |
-| Suspended  | NonPayment         | 因欠款暂停   | 由于未支付服务费用，客户服务暂停。                       |
-| ^          | ComplianceIssues   | 合规问题     | 由于合规性或法律问题，客户服务被暂停。                   |
-| Resumed    | PaymentResolved    | 欠款解决     | 客户已解决支付问题，服务恢复。                           |
-| ^          | ComplianceResolved | 合规问题解决 | 客户已解决之前的合规问题，服务恢复。                     |
-| Terminated | ClientCanceled     | 客户取消     | 客户决定终止服务关系。                                   |
-| ^          | ServiceCompleted   | 服务结束     | 服务合约期满或所有服务项目均已完成，客户状态更新为终止。 |
-| ^          | Defaulted          | 违约         | 客户由于违反服务条款被终止服务。                         |
+| State       | Status             | Label        | Desc                                                     |
+| ----------- | ------------------ | ------------ | -------------------------------------------------------- |
+| Pending     | New                | 新建         | 客户服务刚刚创建，尚未开始任何实质性操作。               |
+| ^           | Onboarding         | 准备阶段     | 客户在此阶段完成必要的准备工作，如资料提交和初步设置。   |
+| Active      | InService          | 服务中       | 客户正在接受服务，正常的服务交付期间。                   |
+| ^           | ReviewPending      | 待复核       | 服务已提供，正在等待内部复核或客户最终确认。             |
+| ^           | ComplianceCheck    | 合规性检查   | 进行定期的合规性检查，确保服务符合所有相关法规和标准。   |
+| Suspended   | NonPayment         | 因欠款暂停   | 由于未支付服务费用，客户服务暂停。                       |
+| ^           | ComplianceIssues   | 合规问题     | 由于合规性或法律问题，客户服务被暂停。                   |
+| Terminated  | ClientCanceled     | 客户取消     | 客户决定终止服务关系。                                   |
+| ^           | ServiceCompleted   | 服务结束     | 服务合约期满或所有服务项目均已完成，客户状态更新为终止。 |
+| ^           | Defaulted          | 违约         | 客户由于违反服务条款被终止服务。                         |
+| ~~Resumed~~ | PaymentResolved    | 欠款解决     | 客户已解决支付问题，服务恢复。                           |
+| ^           | ComplianceResolved | 合规问题解决 | 客户已解决之前的合规问题，服务恢复。                     |
 
 ## Enum
 
@@ -825,3 +912,64 @@ interface GeneralResource {
   - 商品订单
     - 价格通常基于单个或批量商品的固定价格
     - 支付通常在购买时一次性完成，除非涉及分期支付的特殊情况
+
+## Entity vs Resource vs Object
+
+> 相同点: 有唯一标识符，有属性和行为
+
+- Entity
+  - 实体
+  - 通常是业务领域中的一个对象或概念
+  - 通常是数据库中的表
+  - 通常用于 ORM、数据模型、数据存储
+  - Entity -> Property & Relationship & Collection
+- Resource
+  - 资源
+  - 通常是网络或分布式系统中的一个对象或概念
+  - 通常是 RESTful API 中的一个端点
+  - 通常面向 Client/Web/前端
+  - Resource -> URI & Method & Representation & Endpoint & View
+  - urn -> Uniform Resource Name
+- Object
+  - 对象
+  - 通常是一个实例
+  - Object -> Field & Method
+  - GraphQL Object 可以有自定义 field resolver
+
+## displayOrder vs sort vs rank
+
+希望能够在列表中按照一定的顺序展示数据。
+一般使用浮点数或者 fraction。
+
+---
+
+- displayOrder
+  - 显示顺序
+  - 名字最为直观
+- sort
+  - 简短
+- rank - 排名
+  - 一般为整数
+
+## Connection vs Association vs Link vs Join vs Relation
+
+- Connection
+  - 通用的多对多关系
+- Association
+  - 强调关联关系
+- Link
+  - 任何类型的多对多关系
+- Join
+  - 用于数据库设计和ORM框架
+- Relation
+  - 强调关系
+
+---
+
+- 字段
+  - related
+  - target
+  - linked
+  - associated
+- 通用 Connection Entity
+  - https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1

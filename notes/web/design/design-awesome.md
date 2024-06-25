@@ -22,6 +22,8 @@ tags:
   - [Gradient Generator](https://www.joshwcomeau.com/gradient-generator/)
 - https://6pen.art/
   - 基于 AI 技术，从文本描述生成绘画艺术作品
+- background
+  - https://vavebg.com/
 - Color
   - explore
     - https://colorhunt.co/
@@ -40,6 +42,7 @@ tags:
   - https://api.lorem.space/image/face?hash=40361
 - https://www.magicpattern.design/tools/mesh-gradients
   - 生成渐变
+- https://github.com/terkelg/awesome-creative-coding
 
 ## 设计参考
 
@@ -100,6 +103,7 @@ tags:
 - [shuffle.dev](https://shuffle.dev/)
   - [HN](https://news.ycombinator.com/item?id=29349079)
 - Product design course [HN](https://news.ycombinator.com/item?id=30426569)
+- https://www.patternfly.org/
 
 ## 物料
 

@@ -13,6 +13,9 @@ tags:
 ## Awesome
 
 - [picocss/pico](https://github.com/picocss/pico)
+- [lowlighter/matcha](https://github.com/lowlighter/matcha)
+  - MIT, CSS
+  - Drop-in semantic styling library in pure CSS.
 - https://lea.verou.me/2012/04/background-attachment-local/
   - Overflow 显示阴影
 - https://noti.st/rachelandrew/IQsXZC/css-layout-workshop
@@ -150,3 +153,11 @@ HTML 默认样式
 
 - Grid Rotation Concept
   https://codesandbox.io/s/grid-rotation-concept-lnuld6?file=/src/index.tsx
+
+```css
+.input {
+  background:
+    linear-gradient(canvas, canvas) padding-box,
+    linear-gradient(120deg, hsl(278, 44%, 73%), hsl(35, 81%, 73%)) border-box;
+}
+```

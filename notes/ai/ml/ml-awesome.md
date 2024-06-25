@@ -6,9 +6,178 @@ tags:
 
 # Machine Learning Awesome
 
-- [GPT Awesome](./gpt-awesome.md)
-- [Stable Diffusion Awesome](./stable-diffusion-awesome.md)
-- [OCR Awesome](./ocr-awesome.md)
+- [LLM](../llm/README.md)
+  - [LLM Awesome](../llm/llm-awesome.md)
+- [Diffusion](../diffusion/README.md)
+  - [Diffusion Awesome](../diffusion/diffusion-awesome.md)
+- [NLP](../nlp/README.md)
+  - [NLP Awesome](../nlp/nlp-awesome.md)
+- Framework
+  - [PyTorch](./pytorch/README.md)
+    - by Meta
+    - [tinygrad/tinygrad](https://github.com/tinygrad/tinygrad)
+    - [minitorch/minitorch](https://github.com/minitorch/minitorch)
+    - micrograd
+  - [Lightning-AI/pytorch-lightning](https://github.com/Lightning-AI/pytorch-lightning)
+    - Apache-2.0, Python
+  - [JAX](./jax.md)
+    - by Google
+    - [google/maxtext](https://github.com/google/maxtext)
+      - simple, performant and scalable Jax LLM
+  - [apple/corenet](https://github.com/apple/corenet)
+  - [Paddle](./paddle.md)
+    - by 百度
+  - [OpenCV](./opencv/README.md)
+  - Tensorflow
+  - Keras
+  - AutoKeras
+  - FastAI
+  - XGBoost
+  - LightGBM
+  - MegEngine
+  - Scikit-Learn
+  - [microsoft/SynapseML](https://github.com/microsoft/SynapseML)
+    - MIT, Scala
+    - Distributed Machine Learning
+  - caffe
+  - [flashlight/flashlight](https://github.com/flashlight/flashlight)
+    - C++ standalone library for machine learning
+    - from Facebook AI Research Speech team, creators of Torch and Deep Speech
+  - [arrayfire/arrayfire](https://github.com/arrayfire/arrayfire)
+    - BSD-3, C++
+    - general purpose GPU library
+    - Binding: Python, Rust, Julia, NIM
+    - WIP: .NET, Go, Java, Lua, JS, R, Ruby
+  - [google/jax](https://github.com/google/jax)
+    - Apache-2.0, Python, C++
+    - Autograd and XLA
+    - 基础计算框架
+    - [google/flax](https://github.com/google/flax)
+      - neural network
+    - [deepmind/rlax](https://github.com/deepmind/rlax)
+      - reinforcement learning
+    - [deepmind/optax](https://github.com/deepmind/optax)
+      - gradient processing and optimization
+    - [deepmind/dm-haiku](https://github.com/deepmind/dm-haiku)
+      - neural network
+    - [deepmind/chex](https://github.com/deepmind/chex)
+- [Labeling](./labeling.md)
+  - [CVAT](./cvat.md)
+  - [Label Studio](./label-studio.md)
+  - [CVHub520/X-AnyLabeling](./x-anylabeling.md)
+    - GPLv3, Python
+- Deploy/Inference/Serving/Mobile/Optimization
+  - [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino)
+    - Apache-2.0, C++, Python
+    - optimizing, deploying AI inference
+    - by Intel
+  - [hpcaitech/ColossalAI](https://github.com/hpcaitech/ColossalAI)
+    - Apache-2.0, Python
+  - [microsoft/DeepSpeed](https://github.com/microsoft/DeepSpeed)
+    - Apache-2.0, Python, C++
+    - optimization library that makes distributed training and inference easy, efficient, and effective
+  - [Tencent/ncnn](https://github.com/Tencent/ncnn)
+    - BSD-3, C++, C
+    - neural network inference framework optimized for the mobile platform
+  - ~~[johnolafenwa/deepstack](https://github.com/johnolafenwa/deepstack)~~
+    - Apache-2.0, Go, Python
+    - Cross Platform AI Engine for Edge Devices
+- MLOps
+  - [wandb](https://github.com/wandb/wandb)
+    - MIT, Python, Go
+- Voice assistant/voice agent/voice chat/TTS
+  - [mezbaul-h/june](https://github.com/mezbaul-h/june)
+  - [PromtEngineer/Verbi](https://github.com/PromtEngineer/Verbi)
+  - [bolna-ai/bolna](https://github.com/bolna-ai/bolna)
+- VToonify
+- music
+  - [AI-Guru/music-generation-research](https://github.com/AI-Guru/music-generation-research)
+- upscale
+  - [Araxeus/PNG-Upscale](https://github.com/Araxeus/PNG-Upscale)
+    - MIT, Java
+  - [IBM/MAX-Image-Resolution-Enhancer](https://github.com/IBM/MAX-Image-Resolution-Enhancer)
+    - Apache-2.0, Python
+    - Docker
+  - [upscayl/upscayl](https://github.com/upscayl/upscayl)
+    - AGPL-3.0
+    - 需要 GPU
+    - App 方式
+    - Real-ESRGAN
+- image
+  - https://huggingface.co/datasets/vivym/midjourney-messages
+- video
+  - [blakeblackshear/frigate](https://github.com/blakeblackshear/frigate)
+    - MIT, Python, TS
+    - NVR with realtime local object detection for IP cameras
+- text to image
+  - [Yutong-Zhou-cv/Awesome-Text-to-Image](https://github.com/Yutong-Zhou-cv/Awesome-Text-to-Image)
+- vision
+  - [facebookresearch/dinov2](https://github.com/facebookresearch/dinov2)
+    - Apache-2.0, PyTorch
+    - 2023-04-14
+    - DINOv2: Learning Robust Visual Features without Supervision
+    - 用于特征提取，无监督
+  - [facebookresearch/dino](https://github.com/facebookresearch/dino)
+    - Apache-2.0, PyTorch
+    - 2021
+    - ViT
+    - XCiT
+    - DINO - Self-Supervised Vision Transformers
+    - PyTorch code for Vision Transformers training with the Self-Supervised learning method DINO
+- text & image
+  - [Yutong-Zhou-cv/Awesome-Text-to-Image](https://github.com/Yutong-Zhou-cv/Awesome-Text-to-Image)
+- tts
+  - [yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)
+    - MIT, Python
+    - [HN](https://news.ycombinator.com/item?id=38335255)
+- diagram/Visualizer
+  - [lutzroeder/netron](https://github.com/lutzroeder/netron)
+  - https://alexlenail.me/NN-SVG/LeNet.html
+  - [HarisIqbal88/PlotNeuralNet](https://github.com/HarisIqbal88/PlotNeuralNet)
+    - Latex code for making neural networks diagrams
+  - https://www.tensorflow.org/tensorboard/graphs
+  - [stared/keras-sequential-ascii](https://github.com/stared/keras-sequential-ascii)
+    - ASCII
+  - https://medium.com/inbrowserai/simple-diagrams-of-convoluted-neural-networks-39c097d2925b
+- RT-DETR - Real-Time Detection Transformer
+  - by Baidu
+- SAM/Segment Anything Model
+  - by Meta
+  - [facebookresearch/segment-anything](https://github.com/facebookresearch/segment-anything)
+    - https://segment-anything.com
+  - MobileSAM
+  - FastSAM
+- Visual recognition/object detection/segmentation
+  - [facebookresearch/detectron2](https://github.com/facebookresearch/detectron2)
+  - [open-mmlab/mmdetection](https://github.com/open-mmlab/mmdetection)
+  - [google-research/big_vision](https://github.com/google-research/big_vision)
+  - [Yolo](./yolo.md) - You Only Look Once
+    - YOLO-NAS - Neural Architecture Search
+    - [WongKinYiu/yolov7](https://github.com/WongKinYiu/yolov7)
+    - [YOLOv7 Breakdown](https://blog.roboflow.com/yolov7-breakdown/)
+- [lastmile-ai/aiconfig](https://github.com/lastmile-ai/aiconfig)
+  - MIT, Python
+  - config-based framework to build generative AI applications
+- Dataset
+  - https://annas-archive.org/llm
+  - https://www.opendatanetwork.com/
+  - https://datasetsearch.research.google.com/
+  - [datumaro](./datumaro.md)
+    - 数据集管理
+  - [OpenOrca](https://huggingface.co/datasets/Open-Orca/OpenOrca)
+    - [SlimOrca](https://huggingface.co/datasets/Open-Orca/SlimOrca)
+- Foundation
+  - https://lfaidata.foundation/
+  - https://ai.meta.com/
+  - [facebookresearch](https://github.com/facebookresearch)
+  - https://ai.google/
+  - https://labs.google/
+  - https://ai.tencent.com/
+  - [NVlabs](https://github.com/NVlabs)
+    - NVIDIA Research
+  - [THUDM](https://github.com/THUDM)
+    - 清华 KEG & 数据挖掘
+- [PKU-YuanGroup/Video-LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA)
 - [GokuMohandas/MadeWithML](https://github.com/GokuMohandas/MadeWithML)
 - [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 - [wunderwuzzi23/mlattacks](https://github.com/wunderwuzzi23/mlattacks)
@@ -154,34 +323,11 @@ tags:
 - [NVIDIAGameWorks/kaolin-wisp](https://github.com/NVIDIAGameWorks/kaolin-wisp)
   - PyTorch library powered by NVIDIA Kaolin Core to work with neural fields
   - NeRFs, NGLOD, instant-ngp and VQAD
-- [WongKinYiu/yolov7](https://github.com/WongKinYiu/yolov7)
 - [nnaisense/evotorch](https://github.com/nnaisense/evotorch)
-- [YOLOv7 Breakdown](https://blog.roboflow.com/yolov7-breakdown/)
 - [Musico: AI Generated Music](https://www.musi-co.com/listen/streams)
   - [HN](https://news.ycombinator.com/item?id=33027376)
 - [Adventure game graphics with DALL-E 2](https://hpjansson.org/blag/2022/08/16/adventure-game-graphics-with-dall-e-2/)
   - [HN](https://news.ycombinator.com/item?id=32490455)
-- VToonify
-- orgs
-  - [NVlabs](https://github.com/NVlabs)
-  - [facebookresearch](https://github.com/facebookresearch)
-  - [THUDM](https://github.com/THUDM)
-    - 清华 KEG & 数据挖掘
-- music
-  - [AI-Guru/music-generation-research](https://github.com/AI-Guru/music-generation-research)
-- serving
-  - [johnolafenwa/deepstack](https://github.com/johnolafenwa/deepstack)
-- upscale
-  - [Araxeus/PNG-Upscale](https://github.com/Araxeus/PNG-Upscale)
-    - MIT, Java
-  - [IBM/MAX-Image-Resolution-Enhancer](https://github.com/IBM/MAX-Image-Resolution-Enhancer)
-    - Apache-2.0, Python
-    - Docker
-  - [upscayl/upscayl](https://github.com/upscayl/upscayl)
-    - AGPL-3.0
-    - 需要 GPU
-    - App 方式
-    - Real-ESRGAN
 
 ---
 
@@ -195,6 +341,8 @@ tags:
 - https://ai.googleblog.com/
 - https://www.kdnuggets.com/
 - https://stanford.edu/~shervine/teaching/
+- DEEP LEARNING COURSE https://fleuret.org/dlc/
+  - [HN](https://news.ycombinator.com/item?id=38331200)
 
 ---
 
@@ -259,32 +407,6 @@ tags:
 
 ## Framework
 
-- [minitorch/minitorch](https://github.com/minitorch/minitorch)
-- [microsoft/SynapseML](https://github.com/microsoft/SynapseML)
-  - MIT, Scala
-  - Distributed Machine Learning
-- caffe
-- [flashlight/flashlight](https://github.com/flashlight/flashlight)
-  - C++ standalone library for machine learning
-  - from Facebook AI Research Speech team, creators of Torch and Deep Speech
-- [arrayfire/arrayfire](https://github.com/arrayfire/arrayfire)
-  - BSD-3, C++
-  - general purpose GPU library
-  - Binding: Python, Rust, Julia, NIM
-  - WIP: .NET, Go, Java, Lua, JS, R, Ruby
-- [google/jax](https://github.com/google/jax)
-  - Apache-2.0, Python, C++
-  - Autograd and XLA
-  - 基础计算框架
-  - [google/flax](https://github.com/google/flax)
-    - neural network
-  - [deepmind/rlax](https://github.com/deepmind/rlax)
-    - reinforcement learning
-  - [deepmind/optax](https://github.com/deepmind/optax)
-    - gradient processing and optimization
-  - [deepmind/dm-haiku](https://github.com/deepmind/dm-haiku)
-    - neural network
-  - [deepmind/chex](https://github.com/deepmind/chex)
 - [tensorflow/lingvo](https://github.com/tensorflow/lingvo)
   - building sequence models neural networks in Tensorflow
   - ASR, MT
@@ -435,17 +557,6 @@ tags:
 - [cmusphinx](https://cmusphinx.github.io/)
   - 工作已经开始转移到 Kaldi, Vosk
   - [cmusphinx/pocketsphinx](https://github.com/cmusphinx/pocketsphinx)
-
-**术语**
-
-| abbr | mean                          | desc |
-| ---- | ----------------------------- | ---- |
-| ASR  | Automatic Speech Recognition  |
-| TTS  | Text-to-speech                |
-| SE   | Speech enhancement/separation |
-| ST   | Speech Translation            |
-| MT   | Machine Translation           |
-| VC   | Voice conversion              |
 
 ## Hardware Platform
 

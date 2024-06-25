@@ -379,8 +379,9 @@ React.JSX.IntrinsicElements["button"]
 - https://github.com/typescript-cheatsheets/react
 - https://github.com/typescript-cheatsheets/react/blob/main/docs/advanced/patterns_by_usecase.md
 
-## ref as props
+## ref props
 
+- 将 ref 作为 props 而不是特殊的 forwardRef
 - React 19 默认行为
 - 支持这样用
 - 遗留问题 - ref 可能需要特殊处理
@@ -392,4 +393,26 @@ React.JSX.IntrinsicElements["button"]
 - 参考
   - https://www.youtube.com/watch?v=m4QbeS9BTNU
 
+## as props
+
+- 用于指定组件类型
+- 类似的 asChild - 不渲染组件，只传递 props
+  - 也可以认为是 as=Fragment
+
 ## Error: Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.
+
+## registry
+
+```ts
+addReact('YourComponentName', YourComponent);
+define('YourComponentName', componentBlueprint);
+getDefinition('YourComponentName');
+getInstance('YourComponentName', componentID);
+isDefined('YourComponentName');
+```
+
+- https://www.manageiq.org/docs/guides/ui/register_react_component
+- https://github.com/ryansolid/component-register
+- https://www.builder.io/c/docs/custom-components-setup
+- https://github.com/microsoft/fluentui/tree/master/packages/fluentui/react-component-nesting-registry
+- https://github.com/lmerotta-zz/react-plugins

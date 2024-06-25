@@ -10,47 +10,36 @@ tags:
 - https://www.martinfowler.com/
 - https://web.stanford.edu/~ouster/cgi-bin/decisions.php
 
-## profile
+## 常见命名格式 {#case}
 
-- 面向生命周期
-  - 开发、测试、预发布、生产、性能测试
-  - dev/test/staging/prod/perf
-  - local/development/staging/production/testing
-  - dev/test/staging/prod
-  - development/test/stage/produciton
-  - 预发布 - staging/pre/next
-  - 性能测试 - performance/perf/benchmark/bench
-- 面向环境
-  - region
-  - zone
+| case                            | demo                    | for                          |
+| ------------------------------- | ----------------------- | ---------------------------- |
+| `SNAKE_CASE`,`UPPER_SNAKE_CASE` | `MY_CONSTANT_VALUE`     | 常量值、宏定义               |
+| `camelCase`                     | `myVariableName`        | 变量名、函数名               |
+| `PascalCase`                    | `MyClassName`           | 类名、构造函数名             |
+| `kebab-case`,`dash-case`        | `my-variable-name`      | 文件名、URL 路径             |
+| `Title Case`                    | `Title Case Example`    | 标题、文章标题               |
+| `lower_snake_case`              | `my_variable_name`      | 文件名、数据库列名           |
+| `Train-Case`                    | `Train-Case`            | API 名称、某些特定语言的类名 |
+| `dot.case`                      | `my.variable.name`      | 配置项、文件路径             |
+| `Sentence case`                 | `Sentence case example` | 标题、段落开头               |
+| `path/case`                     | `path/case/example`     | 文件路径、URL 路径           |
+| `UPPERCASE`                     | `UPPERCASE`             | 缩写、某些特定语言的常量     |
+| `lowercase`                     | `lowercase`             | 某些特定文件名或变量名       |
+| `namespace:identifier`          | `system:admin`          | 命名空间、标识符、OIDC Scope |
 
----
+- golang 里特殊的名词会做大写
+  - 例如 `UserID` 而不是 `UserId`
+  - MixedCaps
+  - Initialisms https://go.dev/wiki/CodeReviewComments#initialisms
+  - Another convention is that acronyms should be capitalized:
+    - ServeHTTP <- ServeHttp
+    - XMLHTTPRequest <- XmlHttpRequest
 
-- APP_ENV
-  - larval - local, production, testing
-    - https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/Application.php
-- NODE_ENV - production, development, test
-  - https://github.com/kerimdzhanov/dotenv-flow
-  - process.env https://nodejs.org/api/process.html#process_process_env
-- SPRING_PROFILES_ACTIVE,spring.profiles.active
-- [.NET](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/environments)
-  - DOTNET_ENVIRONMENT
-  - ASPNETCORE_ENVIRONMENT
-- NEXT_PUBLIC_VERCEL_ENV, [VERCEL_ENV](https://vercel.com/docs/projects/environment-variables/system-environment-variables)
-  - production, preview, development
-- https://docs.digitalocean.com/products/app-platform/how-to/use-environment-variables/
-  - APP_DOMAIN, APP_URL, APP_ID
-- `__DEV__` 变量
-  - 由 RN 引入 https://reactnative.dev/docs/javascript-environment
-  - ReactRouter 也使用了这个变量 https://github.com/search?q=repo%3Aremix-run%2Freact-router%20__DEV__&type=code
-    - 通过 rollup 注入了变量
-- `__PROD__` 变量
-- import.meta.env
-  - by Vite
+## keycode
 
-## env
-
-- NO_COLOR
+- https://keycode.info/
+  - https://www.toptal.com/developers/keycode/table
 
 ## Roles
 
@@ -464,7 +453,6 @@ pip cache purge
 - Monorepo: please do
   - https://news.ycombinator.com/item?id=18820258
 
-
 ## 链接超时 {#idle-connections}
 
 - 云平台会主动切断 idle 的链接，这个和局域网的链接不同 - 云平台 nat 资源
@@ -510,7 +498,7 @@ sysctl -w \
   net.ipv4.tcp_keepalive_intvl=60 \
   net.ipv4.tcp_keepalive_probes=5
 
-cat <<EOF | sudo tee /etc/sysctl.d/99-tcp_keepalive.conf
+cat << EOF | sudo tee /etc/sysctl.d/99-tcp_keepalive.conf
 net.ipv4.tcp_keepalive_time = 60
 net.ipv4.tcp_keepalive_intvl = 60
 net.ipv4.tcp_keepalive_probes = 5

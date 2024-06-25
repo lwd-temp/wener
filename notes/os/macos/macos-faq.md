@@ -16,6 +16,10 @@ sw_vers -productVersion
 
 system_profiler SPSoftwareDataType
 cat /System/Library/CoreServices/SystemVersion.plist
+
+system_profiler SPHardwareDataType # 查看硬件信息
+system_profiler SPDisplaysDataType # 查看 GPU 信息
+system_profiler SPDisplaysDataType -json | jq -r '.SPDisplaysDataType[0].sppci_cores'
 ```
 
 ## path_helper
@@ -445,4 +449,71 @@ Screen Sharing is not permitted on “10.10.1.1”. Disable and re-enable Screen
 ```bash
 7z x googlechrome.dmg -o/tmp/googlechrome
 VER=$(cat /tmp/googlechrome/Google\ Chrome/Google\ Chrome.app/Contents/Info.plist | grep -A1 CFBundleShortVersionString | tail -1 | sed -r 's/.*>(.*?)<.*/\1/' | tr -d '[[:space:]]')
+```
+
+## 5000 & 7000 ports
+
+macOS 的 AirPlay Receiver 服务会占用 5000 和 7000 端口
+
+- System Settings > General > AirDrop & Handoff > AirPlay Receiver
+
+---
+
+AirPlay Receiver 是 macOS 的一个服务，用于接收来自 iOS 设备的音频和视频流。
+
+## utun 无法 ping 本地IP
+
+```txt title=/etc/pf.conf
+rdr on utun0 inet proto tcp from any to 192.168.100.2 -> 127.0.0.1
+```
+
+```bash
+sudo pfctl -f /etc/pf.conf
+```
+
+- rdr from pfctl
+- 旧版本有 rdr 命令 `rdr on utun0 from any to 192.168.100.2 -> lo0`
+
+```bash
+sudo ifconfig lo0 alias 192.168.100.2
+```
+
+**如果需要每次**
+
+```xml title="/Library/LaunchDaemons/com.example.addlo0alias.plist"
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.example.addlo0alias</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/sbin/ifconfig</string>
+        <string>lo0</string>
+        <string>alias</string>
+        <string>192.168.100.2</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <false/>
+</dict>
+</plist>
+```
+
+```bash
+sudo chown root:wheel /Library/LaunchDaemons/com.example.addlo0alias.plist
+sudo chmod 644 /Library/LaunchDaemons/com.example.addlo0alias.plist
+sudo launchctl load /Library/LaunchDaemons/com.example.addlo0alias.plist
+```
+
+## sudo touch id
+
+```bash
+sudo nano /etc/pam.d/sudo
+```
+
+```
+auth sufficient pam_tid.so
 ```

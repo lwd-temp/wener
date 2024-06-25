@@ -79,10 +79,12 @@ tags:
   - [foliojs](https://github.com/foliojs)
     - [foliojs/pdfkit](https://github.com/foliojs/pdfkit)
       - MIT, JavaScript
-      - JavaScript PDF generation library for Node and the browser
+      - npm:pdfkit
+      - PDF 生成
     - fontkit
     - png.js
     - brotli.js
+  - [alafr/SVG-to-PDFKit](https://github.com/alafr/SVG-to-PDFKit)
   - [mgcrea/node-xlsx](https://github.com/mgcrea/node-xlsx)
     - based on sheetjs
 - Golang
@@ -102,6 +104,13 @@ tags:
 
 ## PDF
 
+- [Stirling-Tools/Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF)
+  - GPLv3, Java
+  - Locally hosted web application that allows you to perform various operations on PDF files
+- Reader
+  - [sumatrapdfreader/sumatrapdf](https://github.com/sumatrapdfreader/sumatrapdf)
+    - GPLv3, C++, Windows
+    - PDF, EPUB, MOBI, CBZ, CBR, FB2, CHM, XPS, DjVu
 - Javascript/TyepScript
   - [mozilla/pdf.js](https://github.com/mozilla/pdf.js)
     - Apache-2.0, Javascript
@@ -126,7 +135,7 @@ tags:
 - Golang
   - [qax-os/excelize](https://github.com/qax-os/excelize)
 - JS/TyepScript
-  - [sheetjs](./sheetjs.md)
+  - [sheetjs](./sheet/sheetjs.md)
   - [dream-num/Luckysheet](./luckysheet.md)
   - [future-architect/cheetah-grid](https://github.com/future-architect/cheetah-grid)
     - Vue, React
@@ -165,7 +174,12 @@ tags:
   - [iddan/react-spreadsheet](https://github.com/iddan/react-spreadsheet)
     - MIT, TS
     - npm:react-spreadsheet
+    - deps: @linaria/core
     - 40kB/12kB
+    - 非常简单易用
+    - ⚠️ 注意 - 不推荐使用
+      - 功能很少
+      - 没有 virtual
     - 依赖的 fast-formula-parser 相对比较大
       - +292kB/83kB
     - 渲染表格内容部分

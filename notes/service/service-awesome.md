@@ -127,6 +127,9 @@ tags:
     - [HN](https://news.ycombinator.com/item?id=30138434)
   - [sarvjeets/lakshmi](https://github.com/sarvjeets/lakshmi)
     - command-line interface inspired by the Bogleheads philosophy
+  - https://invoice-generator.com/
+  - https://invoicedragon.com/
+  - https://wakatime.com/invoicing
 - flag/A/B Testing/features
   - [Flagsmith/flagsmith](https://github.com/Flagsmith/flagsmith)
     - Python
@@ -220,6 +223,7 @@ tags:
     - JSON Forms for jQuery and Bootstrap
   - [orbeon/orbeon-forms](https://github.com/orbeon/orbeon-forms)
     - LGPL-2.1, Scala
+  - [Self-hosting forms, the sane way](https://karelvo.com/blog/selfhosting-forms-the-sane-way)
   - 商业
     - TypeForm, TellForm, Google Forms
 - IoT
@@ -268,9 +272,15 @@ tags:
   - [apache/incubator-answer](https://github.com/apache/incubator-answer)
     - Apache-2.0, Golang, Typescript
 - Storage/File/Drive
-  - Nextcloud
+  - [Nextcloud](./file/nextcloud/README.md)
+  - [cryptpad](https://github.com/cryptpad/cryptpad)
+    - AGPLv3, JS
   - [cloudreve/Cloudreve](https://github.com/cloudreve/Cloudreve)
     - GPLv3, Golang
+- collaboration
+  - [hedgedoc](https://github.com/hedgedoc/hedgedoc)
+    - AGPLv3, TS
+    - real-time collaborative markdown notes
 - file share/airdrop/file transfer
   - [localsend/localsend](https://github.com/localsend/localsend)
     - MIT, Dart, Flutter
@@ -339,6 +349,27 @@ tags:
   - https://placehold.co/
     - https://placehold.co/600x400/png
   - https://picsum.photos/2000/2000
+- photo
+  - [pulsejet/memories](https://github.com/pulsejet/memories)
+    - AGPLv3, PHP, Vue
+    - Nextcloud app
+  - [ente-io/ente](https://github.com/ente-io/ente)
+    - AGPLv3, Dart, TS, Go
+    - End to End Encrypted alternative to Google Photos and Apple Photos
+- design/graphic
+  - [motion-canvas/motion-canvas](https://github.com/motion-canvas/motion-canvas)
+    - MIT, TS
+    - vector animations
+  - [penpot/penpot](https://github.com/penpot/penpot)
+    - MPLv2, Clojure
+    - https://penpot.app/
+  - Figma
+  - [gztchan/awesome-design](https://github.com/gztchan/awesome-design)
+  - [goabstract/Awesome-Design-Tools](https://github.com/goabstract/Awesome-Design-Tools)
+- screen share/recorder
+  - [alyssaxuu/screenity](https://github.com/alyssaxuu/screenity)
+    - GPLv3, JS
+  - RustDesk
 - git
   - [charmbracelet/soft-serve](https://github.com/charmbracelet/soft-serve)
 - zoom, team
@@ -393,6 +424,14 @@ tags:
   - [maplibre](https://github.com/maplibre)
 - serverless/event driven
   - [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev)
+    - background jobs platform for TypeScript
+  - [fission/fission](https://github.com/fission/fission)
+  - [nuclio](https://github.com/nuclio/nuclio)
+    - Apache-2.0, Go
+    - focused on data, I/O, compute intensive workloads
+    - 集成 Jupyter, Kubeflow, cvat
+  - [PipedreamHQ/pipedream](github.com/PipedreamHQ/pipedream)
+    - Source Available
 - IPTV/Radio
   - [YueChan/Live](https://github.com/YueChan/Live)
   - [lizongying/my-tv](https://github.com/lizongying/my-tv)
@@ -484,12 +523,25 @@ tags:
       - for Twitter
     - t.cn
       - for Weibo
+- education
+  - [zoonk/zoonk](https://github.com/zoonk/zoonk)
+    - AGPLv3, Elixir
+    - Platform for creating interactive courses
+- controller
+  - [thewh1teagle/mobslide](https://github.com/thewh1teagle/mobslide)
+    - MIT, TS, Rust
+    - Turn your smartphone into presentation remote controller
 - [DHCP](./network/dhcp/dhcp-awesome.md)
   - [coredhcp/coredhcp](https://github.com/coredhcp/coredhcp)
     - MIT, Go
   - [facebookincubator/dhcplb](https://github.com/facebookincubator/dhcplb)
     - MIT, Go
     - load balancer for DHCP
+- Chat/IM
+  - [chatwoot/chatwoot](https://github.com/chatwoot/chatwoot)
+    - Ruby, Vue
+    - live-chat, email support, omni-channel desk
+  - Zendesk
 - SaaS 服务目录/商业
   - [SaaS Blocks](https://saasblocks.io/)
   - https://github.com/it2025/saasbook

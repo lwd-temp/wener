@@ -6,17 +6,15 @@ tags:
 
 # React Awesome
 
-- [React Patterns](https://reactpatterns.com/)
-- [Glossary + Explain](https://github.com/reactwg/react-18/discussions/46)
-
 :::tip
 
 - 专门功能选择专业组件 - Headless 配合 UI 组件达到更为理想的结果
   - react-table
   - react-hook-form
-  - react-popper
+  - floatingui
 - 选择样式与组件独立的 UI 库
-  - bluprintjs
+  - tailwindcss+daisyui
+  - rewindui/rewindui
 - 避免选择绑定了功能的组件
   - antd
 - 选择组件库的考虑维度
@@ -62,14 +60,19 @@ npm add react-table
 npm add date-fns lodash-es react-fast-compare
 ```
 
+- [React Patterns](https://reactpatterns.com/)
+- [Glossary + Explain](https://github.com/reactwg/react-18/discussions/46)
+
 ## 通用 UI 组件 {#ui-framework}
 
-- tailwindcss+daisyui
+- tailwindcss+[daisyui](../style/daisy.md)
   - 如果开发人员能力足够
   - 如果想要完全控制样式
   - 如果想要做自己的产品
-- [rewindui/rewindui](https://github.com/rewindui/rewindui)
-  - Tailwind
+- TailwindCSS
+  - [rewindui/rewindui](https://github.com/rewindui/rewindui)
+  - [StaticMania/keep-react](https://github.com/StaticMania/keep-react)
+  - [lmsqueezy/wedges](https://github.com/lmsqueezy/wedges)
 - [palantir/blueprint](https://github.com/palantir/blueprint)
   - CSS 样式定义 + React 封装组件
   - 很多组件都可以直接 HTML + CSS 类定义达到效果 - 非常清晰明了
@@ -151,8 +154,13 @@ npm add date-fns lodash-es react-fast-compare
 - chat
   - [alibaba/ChatUI](https://github.com/alibaba/ChatUI)
 
-## 特殊 UI 组件 {#ui-component}
+## 专用 UI 组件 {#ui-component}
 
+- [yairEO/tagify](https://github.com/yairEO/tagify)
+- [react-tags/react-tags](https://github.com/react-tags/react-tags)
+  - npm:react-tag-input
+  - react-dnd
+- [molefrog/spoiled](https://github.com/molefrog/spoiled)
 - [tamagui/tamagui](https://github.com/tamagui/tamagui)
 - [tremorlabs/tremor](https://github.com/tremorlabs/tremor)
   - Apache-2.0
@@ -212,6 +220,7 @@ npm add date-fns lodash-es react-fast-compare
     - 流程节点 UI
   - [projectstorm/react-diagrams](https://github.com/projectstorm/react-diagrams)
 - dnd
+  - [clauderic/dnd-kit](https://github.com/clauderic/dnd-kit)
   - [react-dnd/react-dnd](https://github.com/react-dnd/react-dnd)
   - [atlassian/react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd) - 拖放
   - [bokuweb/react-rnd](https://github.com/bokuweb/react-rnd) - Resize & Drag
@@ -249,6 +258,13 @@ npm add date-fns lodash-es react-fast-compare
     - Create a window manager with React
   - [react-div-100vh](https://www.npmjs.com/package/react-div-100vh)
     - 移动端屏高问题
+- Tree
+  - [dgreene1/react-accessible-treeview](https://github.com/dgreene1/react-accessible-treeview)
+  - rc-tree
+  - [brimdata/react-arborist](https://github.com/brimdata/react-arborist)
+    - npm:react-arborist
+  - https://geist-ui.dev/en-us/components/file-tree
+  - https://github.com/radix-ui/primitives/issues/1456
 - carousel/image zoom/view
   - [malaman/react-image-zoom](https://github.com/malaman/react-image-zoom)
     - 放大一块区域

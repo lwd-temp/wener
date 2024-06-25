@@ -67,6 +67,15 @@ tags:
   - websocket
   - socketio
   - sockjs
+- WebWorker
+  - [GoogleChromeLabs/comlink](https://github.com/GoogleChromeLabs/comlink)
+  - https://vitejs.dev/guide/features.html#web-workers
+    - https://vitejs.dev/config/worker-options.html
+    - `const worker = new Worker(new URL('./worker.ts', import.meta.url, { type: 'module', }))`
+    - `import MyWorker from './worker?worker'`
+    - `import MyWorker from './worker?worker&inline'`
+    - `import MyWorker from './worker?worker&url'`
+    - `const worker = new MyWorker()`
 - IoC/Container/DI
   - [nestjs](../../framework/nestjs/README.md)
     - 👍 整体设计类似 Spring/Angular
@@ -220,6 +229,10 @@ tags:
     - [HN](https://news.ycombinator.com/item?id=39670922)
   - [jonobr1/two.js](https://github.com/jonobr1/two.js)
   - [signature_pad](https://github.com/szimek/signature_pad)
+  - [jakubfiala/atrament](https://github.com/jakubfiala/atrament)
+    - MIT, JS
+    - drawing & handwriting
+    - https://www.fiala.space/atrament/demo/
   - [yisibl/resvg-js](https://github.com/yisibl/resvg-js)
     - SVG renderer, powered by Rust based resvg and napi-rs
   - [svgdotjs/svg.js](https://github.com/svgdotjs/svg.js)
@@ -245,10 +258,14 @@ tags:
     - https://fathy.fr/html2svg
   - [Brooooooklyn/canvas](https://github.com/Brooooooklyn/canvas)
     - skia binding to Node.js
-- 3d rendering/canvas
+- 3d rendering/canvas/webgl
   - threejs
+  - https://wiggle.three.tools/
+  - https://www.shadertoy.com/
   - [pmndrs/react-three-fiber](https://github.com/pmndrs/react-three-fiber)
     - React renderer for Three.js
+  - [3d-dice/dice-box](https://github.com/3d-dice/dice-box)
+    - 3D Game Dice
 - animation
   - [motion-canvas/motion-canvas](https://github.com/motion-canvas/motion-canvas)
     - MIT, TS
@@ -309,6 +326,9 @@ tags:
   - [styled-components/polished](https://github.com/styled-components/polished)
     - MIT, JS
     - writing styles in JavaScript
+  - [rvanwijnen/spectral.js](https://github.com/rvanwijnen/spectral.js)
+    - MIT, JS
+    - paint like color mixing library utilizing the Kubelka-Munk theory
   - CSS color
     - MDN [color-mix](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix)
     - [css-color-mix](https://developer.chrome.com/docs/css-ui/css-color-mix)
@@ -561,17 +581,28 @@ tags:
   - [nolanlawson/fuite](https://github.com/nolanlawson/fuite)
     - finding memory leaks in web apps
   - [sverweij/dependency-cruiser](https://github.com/sverweij/dependency-cruiser)
-- transpile
+- bundler/transpile/build
+  - [evanw/esbuild](https://github.com/evanw/esbuild)
+    - MIT, Go
   - babel
   - ts
-  - esbuild
   - swc
+  - rsbuild
+    - by rspack
+  - [web-infra-dev/rspack](https://github.com/web-infra-dev/rspack)
+    - MIT, Rust
+    - Rust-based web bundler
   - [alangpierce/sucrase](https://github.com/alangpierce/sucrase)
-- bundle
-  - esbuild
+  - turbopack
+  - [rolldown](https://github.com/rolldown/rolldown)
   - webpack
   - rollup
+  - parcel
+  - vite
   - [developit/microbundle](https://github.com/developit/microbundle)
+  - [webpro-nl/knip](https://github.com/webpro-nl/knip)
+    - Find unused
+  - retire.js
 - i18n
   - [lingui/js-lingui](https://github.com/lingui/js-lingui)
     - core - 30kB, 8kB
@@ -591,6 +622,15 @@ tags:
       - set by path
 - benchmark
   - [js-framework-benchmark](https://krausest.github.io/js-framework-benchmark/current.html)
+- framework
+  - [Effect-TS/effect](https://github.com/Effect-TS/effect)
+    - MIT, TS
+    - ecosystem of tools to build robust applications in TypeScript.
+- debug
+  - [HuolalaTech/page-spy-web](https://github.com/HuolalaTech/page-spy-web)
+    - MIT, TS
+    - by 货拉拉
+    - Debug remotely and easily like chrome devtools.
 - data/io
   - ArrayBuffer
     - js 标准里的 nodejs Buffer 对等角色
@@ -620,7 +660,7 @@ tags:
   - punycode
   - url-js
   - url
-- AST
+- AST/parser
   - [meriyah/meriyah](https://github.com/meriyah/meriyah)
     - 127kB, 40kB
   - [acornjs/acorn](https://github.com/acornjs/acorn)
@@ -741,6 +781,11 @@ tags:
     - MIT, JS
 - security/fuzzer
   - https://gitlab.com/gitlab-org/security-products/analyzers/fuzzers/jsfuzz
+- layout
+  - [gridstack/gridstack.js](https://github.com/gridstack/gridstack.js)
+    - MIT, TS
+    - Build interactive dashboards
+- [xyflow/xyflow](https://github.com/xyflow/xyflow)
 
 ---
 
@@ -831,8 +876,12 @@ tags:
     - [tc39/proposal-ses](https://github.com/tc39/proposal-ses)
     - [endojs/Jessie](https://github.com/endojs/Jessie)
       - simple universal safe mobile code
+  - [markwylde/workerbox](https://github.com/markwylde/workerbox)
+    - MIT, JS
+  - [justjake/quickjs-emscripten](https://github.com/justjake/quickjs-emscripten)
   - [tc39/proposal-shadowrealm](https://github.com/tc39/proposal-shadowrealm)
     - https://tc39.es/proposal-shadowrealm/
+  - Azure [AppBlades](https://github.com/Azure/portaldocs/blob/main/portal-sdk/generated/portalfx-blades-appblades.md)
 - IoT
   - [espruino](https://github.com/espruino/Espruino)
     - MPLv2, C
@@ -915,6 +964,7 @@ tags:
   - events
   - server
 - [aermin/web-locks](https://github.com/aermin/web-locks)
+- [Modernizr/Modernizr](https://github.com/Modernizr/Modernizr)
 
 ## Edge/Serverless
 
